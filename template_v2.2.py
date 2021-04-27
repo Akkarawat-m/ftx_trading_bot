@@ -53,15 +53,15 @@ def get_time():  # เวลาปัจจุบัน
     return Time
 
 def get_price():
-    price = exchange.fetch_ticker(pair)['last']
+    price = float(exchange.fetch_ticker(pair)['last'])
     return price
 
 def get_ask_price():
-    ask_price = exchange.fetch_ticker(pair)['ask']
+    ask_price = float(exchange.fetch_ticker(pair)['ask'])
     return ask_price
 
 def get_bid_price():
-    bid_price = exchange.fetch_ticker(pair)['bid']
+    bid_price = float(exchange.fetch_ticker(pair)['bid'])
     return bid_price
 
 def get_pending_buy():
